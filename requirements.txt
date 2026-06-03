@@ -1,0 +1,7 @@
+pydantic
+python-dotenv
+rich 
+pymupdf
+pytesseract
+pillow
+openai
