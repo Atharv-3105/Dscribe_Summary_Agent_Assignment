@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional, Dict, Any
 
 class Document(BaseModel):
     
@@ -40,18 +40,6 @@ class ExtractedFacts(BaseModel):
     follow_up:       list[str] = []
     discharge_condtion:   str | None = None 
     
-class AgentState(BaseModel):
-    
-    patient_id:     str
-    documents:      List[Document] = []
-    extracted_facts:  ExtractedFacts = ExtractedFacts()
-    conflicts:        List[Conflict] = []
-    pending_results:   List[str]  = []
-    trace:           List[TraceStep] = []
-    completed:      bool = False 
-    final_draft:      str = ""  
-    
-    
 class Sections(BaseModel):
     
     diagnosis:          str = ""
@@ -64,3 +52,22 @@ class Sections(BaseModel):
     follow_up:          str = ""
     discharge_condition:str = ""
     miscellaneous:      str = ""
+    
+class AgentState(BaseModel):
+    
+    patient_id:     str
+    documents:      List[Document] = []
+    raw_sections:    Optional[Sections] = None
+    extracted_facts:  Optional[ExtractedFacts] = None
+    reconciled_meds:  Optional[Dict[str, Any]] = None
+    conflicts:        List[Conflict] = []
+    pending_results:   List[str]  = []
+    trace:           List[TraceStep] = []
+    completed:      bool = False 
+    final_draft:      str = ""  
+    safety_flags:       List[str] = []
+    conflicts_checked:  bool = False
+    summary_generated:  bool = False 
+    
+    
+    

@@ -82,7 +82,7 @@ class CoreAgent:
                     result = f"Error: {str(e)}",
                     next_decision= "Skip document and continue"
                 ))
-                step += 1
+            step += 1
                 
         return state
     
