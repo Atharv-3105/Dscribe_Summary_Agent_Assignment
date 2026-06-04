@@ -65,3 +65,11 @@ dscribe_agent/
 ├── data/                       # Input patient PDFs
 ├── main.py                     # Entry point
 └── requirements.txt
+```
+---
+
+## ⚙️ Setup and Execution
+
+### Prerequisites
+* Python 3.10+
+* Tesseract OCR installed on your system and added to your system's PATH.
