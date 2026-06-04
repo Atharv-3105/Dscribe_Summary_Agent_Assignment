@@ -73,3 +73,21 @@ dscribe_agent/
 ### Prerequisites
 * Python 3.10+
 * Tesseract OCR installed on your system and added to your system's PATH.
+
+### Installation
+
+1. Clone the repository and navigate to the project directory:
+```bash
+git clone <your-repo-url>
+cd dscribe_agent
+```
+2. Install the required Python dependencies:
+```
+  pip install -r requirements.txt
+```
+3. Set your Groq API Key as an environment variable:
+
+### Running the Agent 
+```
+  python main.py
+```
