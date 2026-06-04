@@ -1,6 +1,6 @@
 from logger import get_logger
 from pathlib import Path 
-from agent.core_agent2 import CoreAgent
+from agent.core_agent import CoreAgent
 logger = get_logger(__name__)
 
 def main():
