@@ -4,6 +4,8 @@ Dscribe is a privacy-preserving, clinically safe agentic AI system designed to r
 
 Built for the Unriddle Technologies AI Agent Assignment, Dscribe prioritizes **clinical safety (zero fabrication)** over raw AI generation, utilizing a dynamic ReAct agent loop, deterministic rule-based tools, and targeted LLM summarization.
 
+
+
 ---
 
 ## 🏗️ Agent Loop Design
